@@ -10,7 +10,11 @@ window.onload = function() {
     var anchorElements = document.getElementsByTagName('a');
     for (var i in anchorElements)
         anchorElements[i].onclick = function() {
-            alert(this.href);
+            clippy.load('Clippy', function(agent) {
+        // Load Clippy and make him say something
+        agent.show();
+        agent.speak("It looks like you are trying to contribute to an open Source project. I can help with that");
+    });
             return false;
         }
 }
@@ -615,13 +619,6 @@ The code written in C++ is now avalible for anyone to use that agrees to the lic
 <!-- Clippy.js -->
 <script src="clippy.min.js"></script>
 
-<!-- Init script -->
-<script type="text/javascript">
-    clippy.load('Merlin', function(agent) {
-        // Do anything with the loaded agent
-        agent.show();
-    });
-</script>
 
     
       
