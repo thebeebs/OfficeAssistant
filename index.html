@@ -16,6 +16,9 @@ window.onload = function() {
 }
 </script>
 
+<link rel="stylesheet" type="text/css" href="clippy.css" media="all">
+
+
 
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -601,7 +604,26 @@ The code written in C++ is now avalible for anyone to use that agrees to the lic
 
       <script crossorigin="anonymous" src="https://assets-cdn.github.com/assets/frameworks-d22b59d0085e83b7549ba4341ec9e68f80c2f29c8e49213ee182003dc8d568c6.js"></script>
       <script async="async" crossorigin="anonymous" src="https://assets-cdn.github.com/assets/github-0bc0f45c838b5d9d25bc071d2a4b0abe759a093392087dce55cd2caa00ea4f36.js"></script>
-      
+  
+
+
+
+<!-- Add these scripts to  the bottom of the page -->
+<!-- jQuery 1.7+ -->
+<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+
+<!-- Clippy.js -->
+<script src="clippy.min.js"></script>
+
+<!-- Init script -->
+<script type="text/javascript">
+    clippy.load('Merlin', function(agent) {
+        // Do anything with the loaded agent
+        agent.show();
+    });
+</script>
+
+    
       
 
   </body>
