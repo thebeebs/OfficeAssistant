@@ -1,25 +1,6 @@
-﻿
-
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" class="">
-  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
-
-<script>
-window.onload = function() {
-    var anchorElements = document.getElementsByTagName('a');
-    for (var i in anchorElements)
-        anchorElements[i].onclick = function() {
-            clippy.load('Clippy', function(agent) {
-        // Load Clippy and make him say something
-        agent.show();
-        agent.speak("It looks like you are trying to contribute to an open Source project. I can help with that");
-    });
-            return false;
-        }
-}
-</script>
-
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
 <link rel="stylesheet" type="text/css" href="clippy.css" media="all">
 
 
@@ -618,7 +599,20 @@ The code written in C++ is now avalible for anyone to use that agrees to the lic
 
 <!-- Clippy.js -->
 <script src="clippy.min.js"></script>
-
+      <script>
+window.onload = function() {
+    var anchorElements = document.getElementsByTagName('a');
+    for (var i in anchorElements)
+        anchorElements[i].onclick = function() {
+            clippy.load('Clippy', function(agent) {
+        // Load Clippy and make him say something
+        agent.show();
+        agent.speak("It looks like you are trying to contribute to an open Source project. I can help with that");
+    });
+            return false;
+        }
+}
+      </script>
 
     
       
