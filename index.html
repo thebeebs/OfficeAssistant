@@ -62,21 +62,22 @@
 
   <script src="clippy.min.js"></script>                             
                              
-                             <script>
-        window.onload = function () {
+<script>
+    window.onload = function () {
+        clippy.load('Clippy', function (agent) {
             var anchorElements = document.getElementsByTagName('a');
             for (var i in anchorElements)
                 anchorElements[i].onclick = function () {
-                    clippy.load('Clippy', function (agent) {
-                        // Load Clippy and make him say something
-                        agent.show();
-                        agent.speak("It looks like you are trying to contribute to an open Source project. I can help with that");
-                    });
+
+                    // Load Clippy and make him say something
+                    agent.show();
+                    agent.speak("It looks like you are trying to contribute to an open Source project. I can help with that");
+
                     return false;
                 }
-        }
-                             </script>
-    
+        });
+    }
+</script>                                
     </head>
 
 
